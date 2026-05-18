@@ -1,0 +1,193 @@
+{
+  "employees": [
+
+    {
+      "empId": "EMP101",
+      "name": "Mohit Sharma",
+      "department": "IT",
+      "designation": "Software Engineer",
+      "location": "Hyderabad",
+      "salary": "850000",
+      "email": "mohit@gmail.com",
+      "phone": "9876543210"
+    },
+
+    {
+      "empId": "EMP102",
+      "name": "Rahul Verma",
+      "department": "Finance",
+      "designation": "Financial Analyst",
+      "location": "Mumbai",
+      "salary": "720000",
+      "email": "rahul@gmail.com",
+      "phone": "9876501234"
+    },
+
+    {
+      "empId": "EMP103",
+      "name": "Sneha Reddy",
+      "department": "HR",
+      "designation": "HR Manager",
+      "location": "Bangalore",
+      "salary": "680000",
+      "email": "sneha@gmail.com",
+      "phone": "9123456780"
+    },
+
+    {
+      "empId": "EMP104",
+      "name": "Aman Gupta",
+      "department": "Marketing",
+      "designation": "Marketing Lead",
+      "location": "Delhi",
+      "salary": "790000",
+      "email": "aman@gmail.com",
+      "phone": "9988776655"
+    },
+
+    {
+      "empId": "EMP105",
+      "name": "Priya Nair",
+      "department": "Sales",
+      "designation": "Sales Executive",
+      "location": "Chennai",
+      "salary": "640000",
+      "email": "priya@gmail.com",
+      "phone": "9871234567"
+    },
+
+    {
+      "empId": "EMP106",
+      "name": "Karan Mehta",
+      "department": "Operations",
+      "designation": "Operations Manager",
+      "location": "Pune",
+      "salary": "910000",
+      "email": "karan@gmail.com",
+      "phone": "9812345678"
+    },
+
+    {
+      "empId": "EMP107",
+      "name": "Neha Kapoor",
+      "department": "IT",
+      "designation": "UI/UX Designer",
+      "location": "Noida",
+      "salary": "730000",
+      "email": "neha@gmail.com",
+      "phone": "9898989898"
+    },
+
+    {
+      "empId": "EMP108",
+      "name": "Rohit Singh",
+      "department": "Support",
+      "designation": "Technical Support Engineer",
+      "location": "Kolkata",
+      "salary": "580000",
+      "email": "rohit@gmail.com",
+      "phone": "9765432101"
+    }
+
+  ],
+
+  "performanceEmployees": [
+
+    {
+      "empId": "EMP101",
+      "name": "Mohit Sharma",
+      "score": 92,
+      "experience": "3 Years",
+      "projects": "14",
+      "bonus": "120000",
+      "rating": "Excellent",
+      "attendance": "98%",
+      "promotion": "Eligible"
+    },
+
+    {
+      "empId": "EMP102",
+      "name": "Rahul Verma",
+      "score": 45,
+      "experience": "5 Years",
+      "projects": "20",
+      "bonus": "90000",
+      "rating": "Poor",
+      "attendance": "76%",
+      "promotion": "Not Eligible"
+    },
+
+    {
+      "empId": "EMP103",
+      "name": "Sneha Reddy",
+      "score": 38,
+      "experience": "2 Years",
+      "projects": "8",
+      "bonus": "60000",
+      "rating": "Poor",
+      "attendance": "69%",
+      "promotion": "Not Eligible"
+    },
+
+    {
+      "empId": "EMP104",
+      "name": "Aman Gupta",
+      "score": 88,
+      "experience": "6 Years",
+      "projects": "25",
+      "bonus": "150000",
+      "rating": "Excellent",
+      "attendance": "97%",
+      "promotion": "Eligible"
+    },
+
+    {
+      "empId": "EMP105",
+      "name": "Priya Nair",
+      "score": 79,
+      "experience": "4 Years",
+      "projects": "17",
+      "bonus": "85000",
+      "rating": "Very Good",
+      "attendance": "91%",
+      "promotion": "Eligible"
+    },
+
+    {
+      "empId": "EMP106",
+      "name": "Karan Mehta",
+      "score": 49,
+      "experience": "7 Years",
+      "projects": "30",
+      "bonus": "95000",
+      "rating": "Poor",
+      "attendance": "73%",
+      "promotion": "Not Eligible"
+    },
+
+    {
+      "empId": "EMP107",
+      "name": "Neha Kapoor",
+      "score": 95,
+      "experience": "5 Years",
+      "projects": "22",
+      "bonus": "160000",
+      "rating": "Outstanding",
+      "attendance": "99%",
+      "promotion": "Eligible"
+    },
+
+    {
+      "empId": "EMP108",
+      "name": "Rohit Singh",
+      "score": 41,
+      "experience": "1 Year",
+      "projects": "5",
+      "bonus": "30000",
+      "rating": "Poor",
+      "attendance": "65%",
+      "promotion": "Not Eligible"
+    }
+
+  ]
+}

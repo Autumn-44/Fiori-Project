@@ -1,0 +1,111 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        id="addPerformanceDialog01"
+        title="Add Performance Record"
+        draggable="true"
+        resizable="true"
+        contentWidth="500px">
+
+        <VBox
+            id="performanceVBoxFragment01"
+            class="sapUiMediumMargin">
+
+            <Label
+                id="performanceLabelEmpId01"
+                text="Employee ID"/>
+
+            <Input
+                id="performanceInputEmpId01"
+                placeholder="EMP109"/>
+
+            <Label
+                id="performanceLabelName01"
+                text="Employee Name"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="performanceInputName01"
+                placeholder="Employee Name"/>
+
+            <Label
+                id="performanceLabelScore01"
+                text="Performance Score"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="performanceInputScore01"
+                placeholder="85"/>
+
+            <Label
+                id="performanceLabelExperience01"
+                text="Experience"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="performanceInputExperience01"
+                placeholder="5 Years"/>
+
+            <Label
+                id="performanceLabelProjects01"
+                text="Projects"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="performanceInputProjects01"
+                placeholder="15"/>
+
+            <Label
+                id="performanceLabelBonus01"
+                text="Bonus"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="performanceInputBonus01"
+                placeholder="90000"/>
+
+            <Label
+                id="performanceLabelAttendance01"
+                text="Attendance"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="performanceInputAttendance01"
+                placeholder="95%"/>
+
+            <Label
+                id="performanceLabelPromotion01"
+                text="Promotion"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="performanceInputPromotion01"
+                placeholder="Eligible"/>
+
+        </VBox>
+
+        <beginButton>
+
+            <Button
+                id="savePerformanceButton01"
+                text="Add Performance"
+                type="Success"
+                press="onAddPerformance"/>
+
+        </beginButton>
+
+        <endButton>
+
+            <Button
+                id="cancelPerformanceButton01"
+                text="Cancel"
+                type="Reject"
+                press="onClosePerformanceDialog"/>
+
+        </endButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>

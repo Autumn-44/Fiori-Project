@@ -1,0 +1,159 @@
+<mvc:View
+    controllerName="project4.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page
+        id="detailPage01"
+        title="Employee Details"
+        showNavButton="true"
+        navButtonPress="onBack">
+
+        <content>
+
+            <VBox
+                id="employeeDetailVBox01"
+                class="sapUiLargeMargin"
+                width="100%">
+
+                <Title
+                    id="employeeDetailTitle01"
+                    text="Employee Information"/>
+
+                <Panel
+                    id="employeePanel01"
+                    expandable="false"
+                    expanded="true"
+                    class="sapUiMediumMarginTop">
+
+                    <content>
+
+                        <VBox
+                            id="employeeInfoVBox01"
+                            class="sapUiLargeMargin">
+
+                            <!-- EMPLOYEE ID -->
+                            <HBox
+                                id="employeeHBox01"
+                                class="sapUiSmallMarginBottom">
+
+                                <Title
+                                    id="employeeLabelId01"
+                                    text="Employee ID:"
+                                    level="H4"
+                                    width="220px"/>
+
+                                <Text
+                                    id="employeeValueId01"
+                                    text="{empId}"/>
+                            </HBox>
+
+                            <!-- NAME -->
+                            <HBox
+                                id="employeeHBox02"
+                                class="sapUiSmallMarginBottom">
+
+                                <Title
+                                    id="employeeLabelName01"
+                                    text="Employee Name:"
+                                    level="H4"
+                                    width="220px"/>
+
+                                <Text
+                                    id="employeeValueName01"
+                                    text="{name}"/>
+                            </HBox>
+
+                            <!-- DEPARTMENT -->
+                            <HBox
+                                id="employeeHBox03"
+                                class="sapUiSmallMarginBottom">
+
+                                <Title
+                                    id="employeeLabelDepartment01"
+                                    text="Department:"
+                                    level="H4"
+                                    width="220px"/>
+
+                                <Text
+                                    id="employeeValueDepartment01"
+                                    text="{department}"/>
+                            </HBox>
+
+                            <!-- DESIGNATION -->
+                            <HBox
+                                id="employeeHBox04"
+                                class="sapUiSmallMarginBottom">
+
+                                <Title
+                                    id="employeeLabelDesignation01"
+                                    text="Designation:"
+                                    level="H4"
+                                    width="220px"/>
+
+                                <Text
+                                    id="employeeValueDesignation01"
+                                    text="{designation}"/>
+                            </HBox>
+
+                            <!-- LOCATION -->
+                            <HBox
+                                id="employeeHBox05"
+                                class="sapUiSmallMarginBottom">
+
+                                <Title
+                                    id="employeeLabelLocation01"
+                                    text="Location:"
+                                    level="H4"
+                                    width="220px"/>
+
+                                <Text
+                                    id="employeeValueLocation01"
+                                    text="{location}"/>
+                            </HBox>
+
+                            <!-- EMAIL -->
+                            <HBox
+                                id="employeeHBox06"
+                                class="sapUiSmallMarginBottom">
+
+                                <Title
+                                    id="employeeLabelEmail01"
+                                    text="Email:"
+                                    level="H4"
+                                    width="220px"/>
+
+                                <Text
+                                    id="employeeValueEmail01"
+                                    text="{email}"/>
+                            </HBox>
+
+                            <!-- PHONE -->
+                            <HBox
+                                id="employeeHBox07"
+                                class="sapUiSmallMarginBottom">
+
+                                <Title
+                                    id="employeeLabelPhone01"
+                                    text="Phone:"
+                                    level="H4"
+                                    width="220px"/>
+
+                                <Text
+                                    id="employeeValuePhone01"
+                                    text="{phone}"/>
+                            </HBox>
+
+                        </VBox>
+
+                    </content>
+
+                </Panel>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

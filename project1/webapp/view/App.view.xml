@@ -1,0 +1,16 @@
+<mvc:View
+    controllerName="project1.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <App id="app">
+
+        <pages>
+
+            <mvc:XMLView viewName="project1.view.View1"/>
+
+        </pages>
+
+    </App>
+
+</mvc:View>

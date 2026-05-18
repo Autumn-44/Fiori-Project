@@ -1,0 +1,111 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        id="addEmployeeDialog01"
+        title="Add New Employee"
+        draggable="true"
+        resizable="true"
+        contentWidth="500px">
+
+        <VBox
+            id="addEmployeeVBox01"
+            class="sapUiMediumMargin">
+
+            <Label
+                id="labelEmpIdFragment01"
+                text="Employee ID"/>
+
+            <Input
+                id="inputEmpIdFragment01"
+                placeholder="EMP109"/>
+
+            <Label
+                id="labelEmpNameFragment01"
+                text="Employee Name"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="inputEmpNameFragment01"
+                placeholder="Enter Name"/>
+
+            <Label
+                id="labelDepartmentFragment01"
+                text="Department"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="inputDepartmentFragment01"
+                placeholder="Department"/>
+
+            <Label
+                id="labelDesignationFragment01"
+                text="Designation"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="inputDesignationFragment01"
+                placeholder="Designation"/>
+
+            <Label
+                id="labelLocationFragment01"
+                text="Location"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="inputLocationFragment01"
+                placeholder="Location"/>
+
+            <Label
+                id="labelSalaryFragment01"
+                text="Salary"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="inputSalaryFragment01"
+                placeholder="Salary"/>
+
+            <Label
+                id="labelEmailFragment01"
+                text="Email"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="inputEmailFragment01"
+                placeholder="Email"/>
+
+            <Label
+                id="labelPhoneFragment01"
+                text="Phone"
+                class="sapUiSmallMarginTop"/>
+
+            <Input
+                id="inputPhoneFragment01"
+                placeholder="Phone Number"/>
+
+        </VBox>
+
+        <beginButton>
+
+            <Button
+                id="saveEmployeeButtonFragment01"
+                text="Add Employee"
+                type="Success"
+                press="onAddEmployee"/>
+
+        </beginButton>
+
+        <endButton>
+
+            <Button
+                id="cancelEmployeeButtonFragment01"
+                text="Cancel"
+                type="Reject"
+                press="onCloseDialog"/>
+
+        </endButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>
