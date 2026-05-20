@@ -1,0 +1,135 @@
+<mvc:View
+    controllerName="fileuploader.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified">
+
+    
+        id="mainPage01"
+        title="Excel File Uploader"
+        class="customPage">
+
+
+
+            <VBox
+                id="mainVBox01"
+                width="100%"
+                class="sapUiMediumMargin">
+
+                <!-- TOOLBAR -->
+
+                <Toolbar
+                    id="toolbar01"
+                    class="customToolbar">
+
+                    <Title
+                        id="title01"
+                        text="Excel Upload Dashboard"/>
+
+                    <ToolbarSpacer/>
+
+                    <Button
+                        id="downloadSelectedButton01"
+                        text="Download PDF"
+                        icon="sap-icon://pdf-attachment"
+                        type="Emphasized"
+                        press="onDownloadSelectedRows"/>
+
+                </Toolbar>
+
+                <!-- FILE UPLOADER -->
+
+                <u:FileUploader
+                    id="fileUploader01"
+                    width="400px"
+                    placeholder="Choose Excel File"
+                    fileType="xlsx,xls"
+                    class="sapUiMediumMarginTop"/>
+
+                <!-- LOAD BUTTON -->
+
+                <Button
+                    id="loadButton01"
+                    text="Load File"
+                    icon="sap-icon://upload"
+                    type="Accept"
+                    press="handleUploadPress"
+                    class="sapUiMediumMarginTop"/>
+
+                <!-- TABLE -->
+
+                <Table
+                    id="excelTable01"
+                    mode="MultiSelect"
+                    sticky="ColumnHeaders"
+                    growing="true"
+                    growingScrollToLoad="true"
+                    width="100%"
+                    items="{excelModel>/rows}"
+                    class="sapUiLargeMarginTop customTable">
+
+                    <columns>
+
+                        <Column>
+                            <Text text="Project Name"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Task Name"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Assigned To"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Start Date"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Days Required"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="End Date"/>
+                        </Column>
+
+                        <Column>
+                            <Text text="Progress"/>
+                        </Column>
+
+                    </columns>
+
+                    <items>
+
+                        <ColumnListItem>
+
+                            <cells>
+
+                                <Text text="{excelModel>Project Name}"/>
+
+                                <Text text="{excelModel>Task Name}"/>
+
+                                <Text text="{excelModel>Assigned to}"/>
+
+                                <Text text="{excelModel>Start Date}"/>
+
+                                <Text text="{excelModel>Days Required}"/>
+
+                                <Text text="{excelModel>End Date}"/>
+
+                                <Text text="{excelModel>Progress}"/>
+
+                            </cells>
+
+                        </ColumnListItem>
+
+                    </items>
+
+                </Table>
+
+            </VBox>
+
+        
+
+</mvc:View>

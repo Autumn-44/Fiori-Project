@@ -1,0 +1,252 @@
+<mvc:View
+    controllerName="project5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+
+    <Page
+        id="employeePage01"
+        title="Employee Registration Form">
+
+        <content>
+
+            <VBox
+                id="mainVBox01"
+                width="100%"
+                alignItems="Center">
+
+                <Panel
+                    id="employeePanel01"
+                    width="80%"
+                    class="sapUiLargeMarginTop">
+
+                    <content>
+
+                        <Title
+                            id="formTitle01"
+                            text="Employee Registration"
+                            level="H2"
+                            class="sapUiMediumMarginBottom"/>
+
+                        <f:SimpleForm
+                            id="employeeForm01"
+                            editable="true"
+                            layout="ResponsiveGridLayout"
+                            columnsXL="2"
+                            columnsL="2"
+                            columnsM="2">
+
+                            <!-- EMPLOYEE ID -->
+
+                            <Label
+                                id="labelEmpId01"
+                                text="Employee ID"/>
+
+                            <Input
+    id="inputEmpId01"
+    value="{
+        path: 'employeeModel>/empId',
+        type: 'sap.ui.model.type.String',
+        constraints: {
+            minLength: 6,
+            maxLength: 10
+        }
+    }"
+    valueLiveUpdate="false"
+    placeholder="EMP101"/>
+                            <!-- NAME -->
+
+                            <Label
+                                id="labelName01"
+                                text="Full Name"/>
+
+                            <Input
+                            
+    id="inputName01"
+    value="{
+        path: 'employeeModel>/name',
+        type: 'sap.ui.model.type.String',
+        constraints: {
+            minLength: 3,
+            maxLength: 30
+        }
+    }"
+    valueLiveUpdate="false"
+    placeholder="Enter Name"/>
+                            <!-- EMAIL -->
+
+                            <Label
+                                id="labelEmail01"
+                                text="Email"/>
+
+                          <Input
+    id="inputEmail01"
+    type="Email"
+    value="{
+        path: 'employeeModel>/email',
+        type: 'sap.ui.model.type.String',
+        constraints: {
+            minLength: 10,
+            maxLength: 40
+        }
+    }"
+    valueLiveUpdate="false"
+    placeholder="employee@gmail.com"/>
+                            <!-- PHONE -->
+
+                            <Label
+                                id="labelPhone01"
+                                text="Phone Number"/>
+
+                            <Input
+    id="inputPhone01"
+    value="{
+        path: 'employeeModel>/phone',
+        type: 'sap.ui.model.type.Integer',
+        constraints: {
+            minimum: 1000000000,
+            maximum: 9999999999
+        }
+    }"
+    valueLiveUpdate="true"
+    placeholder="9876543210"/>
+
+                            <!-- DEPARTMENT -->
+
+                            <Label
+                                id="labelDepartment01"
+                                text="Department"/>
+
+                            <Select
+                                id="selectDepartment01"
+                                selectedKey="{employeeModel>/department}">
+
+                                <items>
+
+                                    <core:Item
+                                        id="departmentDefault01"
+                                        key=""
+                                        text="Select Department"/>
+
+                                    <core:Item
+                                        id="departmentIT01"
+                                        key="IT"
+                                        text="IT"/>
+
+                                    <core:Item
+                                        id="departmentHR01"
+                                        key="HR"
+                                        text="HR"/>
+
+                                    <core:Item
+                                        id="departmentFinance01"
+                                        key="Finance"
+                                        text="Finance"/>
+
+                                    <core:Item
+                                        id="departmentSales01"
+                                        key="Sales"
+                                        text="Sales"/>
+
+                                </items>
+
+                            </Select>
+
+                            <!-- SALARY -->
+
+                            <Label
+                                id="labelSalary01"
+                                text="Salary"/>
+
+                            <Input
+                                id="inputSalary01"
+                                value="{
+                                    path: 'employeeModel>/salary',
+                                    type: 'sap.ui.model.type.Float'
+                                }"
+                                valueLiveUpdate="true"
+                                placeholder="50000"/>
+
+                            <!-- JOINING DATE -->
+
+                            <Label
+                                id="labelDate01"
+                                text="Joining Date"/>
+
+                            <DatePicker
+                                id="datePicker01"
+                                value="{
+                                    path: 'employeeModel>/joiningDate',
+                                    type: 'sap.ui.model.type.Date'
+                                }"
+                                displayFormat="dd/MM/yyyy"/>
+
+                            <!-- STATUS -->
+
+                            <Label
+                                id="labelStatus01"
+                                text="Employee Status"/>
+
+                            <Select
+                                id="selectStatus01"
+                                selectedKey="{employeeModel>/status}">
+
+                                <items>
+
+                                    <core:Item
+                                        id="statusDefault01"
+                                        key=""
+                                        text="Select Status"/>
+
+                                    <core:Item
+                                        id="statusActive01"
+                                        key="Active"
+                                        text="Active"/>
+
+                                    <core:Item
+                                        id="statusInactive01"
+                                        key="Inactive"
+                                        text="Inactive"/>
+
+                                </items>
+
+                            </Select>
+
+                        </f:SimpleForm>
+
+                        <!-- BUTTONS -->
+
+                        <HBox
+                            id="buttonHBox01"
+                            justifyContent="End"
+                            class="sapUiLargeMarginTop">
+
+                            <Button
+                                id="submitButton01"
+                                text="Submit"
+                                type="Emphasized"
+                                icon="sap-icon://accept"
+                                press="onSubmit"/>
+
+                            <Button
+                                id="resetButton01"
+                                text="Reset"
+                                type="Reject"
+                                icon="sap-icon://refresh"
+                                class="sapUiTinyMarginBegin"
+                                press="onReset"/>
+
+                        </HBox>
+
+                    </content>
+
+                </Panel>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

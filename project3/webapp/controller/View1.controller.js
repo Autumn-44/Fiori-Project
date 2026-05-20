@@ -562,125 +562,202 @@ sap.ui.define([
 
         generateCombinedPDF: function () {
 
-            const { jsPDF } = window.jspdf;
+    const { jsPDF } = window.jspdf;
 
-            var doc =
-                new jsPDF("landscape");
+    var doc = new jsPDF({
+        orientation: "landscape",
+        unit: "pt",
+        format: "a4"
+    });
 
-            // EMPLOYEE DATA
+    // REMOVE COLORS
+    var tableStyles = {
 
-            var aEmployees =
-                this.getView()
-                .getModel()
-                .getProperty("/employees");
+        theme: "grid",
 
-            var aEmployeeBody = [];
+        styles: {
 
-            aEmployees.forEach(function (emp) {
+            fontSize: 8,
 
-                aEmployeeBody.push([
+            textColor: [0, 0, 0],
 
-                    emp.empId,
-                    emp.name,
-                    emp.department,
-                    emp.designation,
-                    emp.location,
-                    emp.salary,
-                    emp.email,
-                    emp.phone
+            lineColor: [0, 0, 0],
 
-                ]);
-            });
+            lineWidth: 0.5,
 
-            doc.text(
-                "Employee Records",
-                14,
-                20
-            );
+            fillColor: false,
 
-            doc.autoTable({
+            halign: "center",
 
-                startY: 30,
+            valign: "middle"
 
-                head: [[
+        },
 
-                    "ID",
-                    "Name",
-                    "Department",
-                    "Designation",
-                    "Location",
-                    "Salary",
-                    "Email",
-                    "Phone"
+        headStyles: {
 
-                ]],
+            fillColor: false,
 
-                body: aEmployeeBody
+            textColor: [0, 0, 0],
 
-            });
+            lineColor: [0, 0, 0],
 
-            // PERFORMANCE DATA
+            lineWidth: 0.5,
 
-            var aPerformance =
-                this.getView()
-                .getModel()
-                .getProperty(
-                    "/performanceEmployees"
-                );
+            fontStyle: "bold"
 
-            var aPerformanceBody = [];
+        },
 
-            aPerformance.forEach(function (emp) {
+        bodyStyles: {
 
-                aPerformanceBody.push([
+            fillColor: false,
 
-                    emp.empId,
-                    emp.name,
-                    emp.score,
-                    emp.experience,
-                    emp.projects,
-                    emp.bonus,
-                    emp.attendance,
-                    emp.promotion,
-                    emp.rating
+            textColor: [0, 0, 0]
 
-                ]);
-            });
-
-            doc.addPage();
-
-            doc.text(
-                "Performance Records",
-                14,
-                20
-            );
-
-            doc.autoTable({
-
-                startY: 30,
-
-                head: [[
-
-                    "ID",
-                    "Name",
-                    "Score",
-                    "Experience",
-                    "Projects",
-                    "Bonus",
-                    "Attendance",
-                    "Promotion",
-                    "Rating"
-
-                ]],
-
-                body: aPerformanceBody
-
-            });
-
-            doc.save(
-                "Complete_Enterprise_Report.pdf"
-            );
         }
 
+    };
+
+    // TITLE
+
+    doc.setFontSize(18);
+
+    doc.text(
+        "Enterprise Employee Dashboard Report",
+        40,
+        40
+    );
+
+    // EMPLOYEE TABLE
+
+    var aEmployees = this.getView()
+        .getModel()
+        .getProperty("/employees");
+
+    var aEmployeeBody = [];
+
+    aEmployees.forEach(function (emp) {
+
+        aEmployeeBody.push([
+
+            emp.empId,
+            emp.name,
+            emp.department,
+            emp.designation,
+            emp.location,
+            emp.salary,
+            emp.email,
+            emp.phone,
+            "Delete"
+
+        ]);
     });
+
+    doc.setFontSize(13);
+
+    doc.text(
+        "Employee Records",
+        40,
+        80
+    );
+
+    doc.autoTable({
+
+        startY: 90,
+
+        head: [[
+
+            "Employee ID",
+            "Employee Name",
+            "Department",
+            "Designation",
+            "Location",
+            "Salary",
+            "Email",
+            "Phone",
+            "Delete"
+
+        ]],
+
+        body: aEmployeeBody,
+
+        ...tableStyles
+    });
+
+    // SECOND TABLE ON SAME PAGE
+
+    var finalY = doc.lastAutoTable.finalY + 40;
+
+    var aPerformance = this.getView()
+        .getModel()
+        .getProperty(
+            "/performanceEmployees"
+        );
+
+    var aPerformanceBody = [];
+
+    aPerformance.forEach(function (emp) {
+
+        aPerformanceBody.push([
+
+            emp.empId,
+            emp.name,
+            emp.score + "%",
+            emp.experience,
+            emp.projects,
+            emp.bonus,
+            emp.attendance,
+            emp.promotion,
+            emp.rating,
+            "Delete"
+
+        ]);
+    });
+
+    doc.setFontSize(13);
+
+    doc.text(
+        "Performance Records",
+        40,
+        finalY
+    );
+
+    doc.autoTable({
+
+        startY: finalY + 10,
+
+        head: [[
+
+            "Employee ID",
+            "Employee Name",
+            "Score",
+            "Experience",
+            "Projects",
+            "Bonus",
+            "Attendance",
+            "Promotion",
+            "Rating",
+            "Delete"
+
+        ]],
+
+        body: aPerformanceBody,
+
+        ...tableStyles
+    });
+
+    // FOOTER
+
+    doc.setFontSize(10);
+
+    doc.text(
+        "Generated from SAPUI5 Employee Dashboard",
+        40,
+        570
+    );
+
+    doc.save(
+        "Enterprise_Dashboard_Report.pdf"
+    );
+}
+}); 
 });
